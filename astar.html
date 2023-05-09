@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="css/styles.css" rel="stylesheet" media="screen" type="text/css">
+	
+	<title>A Star Algorithm</title>
+</head>
+<body>
+	<div class="container">
+		<div class="grid-container">
+		  <h2> Initial Config </h2>
+		  <div class="grid start">
+			  <div class="row r1"> 
+				<div class="cell c0" data-pos="0,0"><span id="0"></span></div>
+				<div class="cell c1" data-pos="0,1"><span id="1"></span></div>
+				<div class="cell c2" data-pos="0,2"><span id="2"></span></div>
+			  </div>
+			  <div class="row r2"> 
+				<div class="cell c3" data-pos="1,0"><span id="3"></span></div>
+				<div class="cell c4" data-pos="1,1"><span id="4"></span></div>
+				<div class="cell c5" data-pos="1,2"><span id="5"></span></div>
+			  </div>
+			  <div class="row r3"> 
+				<div class="cell c6" data-pos="2,0"><span id="6"></span></div>
+				<div class="cell c7" data-pos="2,1"><span id="7"></span></div>
+				<div class="cell c8" data-pos="2,2"><span id="8"></span></div>
+			  </div>
+		  </div>
+		 
+		  <button onclick="start()"> Solve </button>
+		  <button onclick="showSolution()"> Show Step </button>
+	    </div>
+	
+		<div class="grid-container">
+		  <h2> Goal Config </h2>
+		  <div class="grid goal">
+			  <div class="row"> 
+				<div class="cell"><span>1</span></div>
+				<div class="cell"><span>2</span></div>
+				<div class="cell"><span>3</span></div>
+			  </div>
+			  <div class="row"> 
+				<div class="cell"><span>4</span></div>
+				<div class="cell"><span>5</span></div>
+				<div class="cell"><span>6</span></div>
+			  </div>
+			  <div class="row"> 
+				<div class="cell"><span>7</span></div>
+				<div class="cell"><span>8</span></div>
+				<div class="cell"></div>
+			  </div>
+		  </div>
+		</div>
+	
+	</div>
+	<div id="panel">
+	</div>
+	<script>
+		var v;
+		// document.getElementById("1").innerHTML="5";
+		var arr=JSON.parse(sessionStorage.getItem("names"));
+		console.log(arr);
+		for(i=0;i<arr.length;i++)
+		{
+			if(arr[i]!=0){
+				document.getElementById(i).innerHTML=arr[i];
+				document.getElementById(i).parentNode.setAttribute("id","");
+			}
+			else{
+				document.getElementById(i).innerHTML="";
+				document.getElementById(i).parentNode.setAttribute("id","empty");
+				v=document.getElementById(i).parentNode.getAttribute("data-pos");
+			}
+		}
+	</script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/priority-queue.js"></script>
+	<script type="text/javascript" src="js/hashtable.js"></script>
+	<script type="text/javascript" src="js/hashset.js"></script>
+	<script type="text/javascript" src="js/stpuzzle.js"></script>
+</body>
+</html>

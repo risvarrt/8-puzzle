@@ -1,0 +1,87 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  /*background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);*/
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.container {
+	width:1024px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height:380px;
+}
+
+.grid-container {
+	float: left;
+	width:210px;
+	height:250px;
+	text-align: center;
+	width:50%;
+}
+
+.grid-container h2 {
+	font-family: Tahoma;
+}
+
+.grid {
+	background-color: rgb(248,248,248);
+	border: solid 5px rgb(249, 90, 0);
+	width:210px;
+	height:210px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 3px;
+	box-shadow: 5px 5px #d8d8d8, 5px 5px #d8d8d8;
+	overflow: auto;
+}
+
+.grid-container button {
+	margin-top:30px;
+	border: none;
+  font-size: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+	background-color: #D4EE9F;
+  	color: #003333;
+	text-transform: uppercase;
+	height:40px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.row {
+	height:33.3%;
+}
+
+.cell {
+	width:32.3%;
+	height:100%;
+	float: left;
+	text-align: center;
+	font-size:150%;
+	font-family: Arial;
+	font-weight: bold;
+	position:relative;
+}
+
+.cell:hover {
+	background-color: rgb(221,221,221);
+}
+
+.cell span {
+	display: block;
+	transform: translateY(70%);
+}
+
+#panel {
+	width:100%;
+	background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+	min-height:200px;
+	color:black;
+	font-weight: bold;
+	padding:5px;
+	font-family: Arial;
+}
+
